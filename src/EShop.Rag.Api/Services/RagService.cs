@@ -131,29 +131,19 @@ Customer question:
         string question,
         CancellationToken cancellationToken = default)
     {
-        var plannerPrompt = $"""
-Plan the retrieval needed to answer the eShop customer question.
-
-Available knowledge categories:
-Returns
-Warranty
-Shipping
-Promotion
-Product
-
-Return ONLY JSON in this form:
-{{
-  "reason": "short explanation",
-  "queries": [
-    {{ "query": "focused search query", "category": "Returns" }}
-  ]
-}}
-
-Use 1 to 4 queries. Category must be one of the listed categories or null.
-
-Customer question:
-{question}
-""";
+        var plannerPrompt =
+            "Plan the retrieval needed to answer the eShop customer question.\n\n" +
+            "Available knowledge categories:\nReturns\nWarranty\nShipping\nPromotion\nProduct\n\n" +
+            "Return ONLY JSON in this form:\n" +
+            "{\n" +
+            "  \"reason\": \"short explanation\",\n" +
+            "  \"queries\": [\n" +
+            "    { \"query\": \"focused search query\", \"category\": \"Returns\" }\n" +
+            "  ]\n" +
+            "}\n\n" +
+            "Use 1 to 4 queries. Category must be one of the listed categories or null.\n\n" +
+            "Customer question:\n" +
+            question;
 
         var rawPlan = await _openAi.ChatAsync(
             "You are the retrieval planner for an agentic-style RAG pipeline.",
