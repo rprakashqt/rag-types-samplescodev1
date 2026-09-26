@@ -1,0 +1,9 @@
+eShop US Laptop Return Policy
+
+Laptop computers purchased from eShop US may be returned within 14 calendar days from delivery when the product, original accessories, packaging, and proof of purchase are available.
+
+Delivery-damage claims should be reported within 5 calendar days. Verified transit damage can qualify for replacement or refund.
+
+Digital licenses and products damaged by the customer are excluded from the standard return process.
+
+This sample policy is demonstration data for the RAG learning project and is not a real retailer policy.

@@ -1,0 +1,11 @@
+eShop India Shipping Policy
+
+Standard shipment normally takes 3 to 7 business days after dispatch. Express shipment normally takes 1 to 3 business days after dispatch when the destination is serviceable.
+
+Estimated delivery dates are estimates and can change because of carrier delays, weather, regional restrictions, or inventory-transfer delays.
+
+A live order's current tracking state must be obtained from the Order or Shipping service. This knowledge document explains policy only and must not be used as the source of truth for a specific order's current location.
+
+If an order is substantially delayed, customer support should check the live shipment status before offering cancellation, refund, or replacement options.
+
+This sample policy is demonstration data for the RAG learning project.

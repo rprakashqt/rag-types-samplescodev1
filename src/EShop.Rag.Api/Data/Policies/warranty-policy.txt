@@ -1,0 +1,11 @@
+eShop Laptop Warranty Knowledge
+
+New laptops sold directly by eShop include a standard manufacturer warranty unless the product listing states otherwise.
+
+For the sample SKU-XPS-9530, the standard warranty period is one year from the invoice date. Manufacturing defects may be handled through the warranty process after return eligibility has expired.
+
+Accidental damage, liquid damage, unauthorized hardware modification, and normal battery wear are not covered by the standard manufacturer warranty unless an additional protection plan applies.
+
+When a product is still inside the applicable return window and arrived damaged, the return or replacement process should normally be evaluated before the manufacturer-warranty process.
+
+This sample policy is demonstration data for the RAG learning project.

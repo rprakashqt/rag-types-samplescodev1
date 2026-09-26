@@ -1,0 +1,12 @@
+eShop Product Knowledge: SKU-XPS-9530
+
+SKU: SKU-XPS-9530
+Product type: Laptop
+Product family: XPS 15 class sample device
+Standard warranty: one year from invoice date
+Return policy: determined by the customer's regional return policy
+Shipping eligibility: standard and express shipping can be available depending on postal code and stock location
+
+When answering questions about this SKU, combine this product record with the correct regional policy instead of assuming one country's return period applies globally.
+
+This product record is fictional demonstration data for the RAG learning project.

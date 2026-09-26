@@ -1,0 +1,32 @@
+name: dotnet-ci
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restore
+        run: dotnet restore src/EShop.Rag.Api/EShop.Rag.Api.csproj
+
+      - name: Build
+        run: dotnet build src/EShop.Rag.Api/EShop.Rag.Api.csproj --configuration Release --no-restore
+
+      - name: Docker build
+        run: docker build -t eshop-rag-samples:${{ github.sha }} .

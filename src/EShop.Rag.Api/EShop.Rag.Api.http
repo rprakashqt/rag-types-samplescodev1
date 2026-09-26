@@ -1,0 +1,49 @@
+@host = http://localhost:5000
+
+### Service info
+GET {{host}}/
+
+### 1. Create the Azure AI Search index and ingest sample knowledge
+POST {{host}}/api/knowledge/initialize
+
+### 2. Classic Vector RAG
+POST {{host}}/api/rag/classic
+Content-Type: application/json
+
+{
+  "question": "Can I return a laptop after 20 days?"
+}
+
+### 3. Hybrid RAG - exact SKU plus semantic knowledge
+POST {{host}}/api/rag/hybrid
+Content-Type: application/json
+
+{
+  "question": "What warranty applies to SKU-XPS-9530?"
+}
+
+### 4. Filtered RAG - India + Laptop
+POST {{host}}/api/rag/filtered
+Content-Type: application/json
+
+{
+  "question": "Can I return this laptop after 20 days?",
+  "country": "IN",
+  "productCategory": "Laptop"
+}
+
+### 5. Multi-query RAG
+POST {{host}}/api/rag/multi-query
+Content-Type: application/json
+
+{
+  "question": "My laptop arrived damaged during the festival offer and its warranty expires next month. Can I return it or should I use warranty?"
+}
+
+### 6. Agentic-style RAG
+POST {{host}}/api/rag/agentic
+Content-Type: application/json
+
+{
+  "question": "My laptop arrived damaged, delivery was late, and I bought it during a festival promotion. What policies should be considered?"
+}
