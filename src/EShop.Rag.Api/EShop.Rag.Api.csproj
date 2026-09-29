@@ -5,4 +5,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>eshop-rag-types-samples-v1</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+  </ItemGroup>
 </Project>
