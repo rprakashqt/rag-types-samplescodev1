@@ -8,3 +8,4 @@ obj/
 appsettings.Local.json
 TestResults/
 coverage/
+/src/EShop.Rag.Api/Properties/launchSettings.json
