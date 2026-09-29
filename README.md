@@ -127,7 +127,67 @@ For production, replace API keys with Managed Identity / Microsoft Entra ID wher
     dotnet restore
     dotnet run --project src/EShop.Rag.Api
 
-Use src/EShop.Rag.Api/EShop.Rag.Api.http to exercise the endpoints.
+### Swagger API testing
+
+The application now includes Swagger UI through Swashbuckle.
+
+When started locally, open:
+
+    http://localhost:5000/swagger
+
+Visual Studio / dotnet launch settings are configured to open Swagger automatically.
+
+Recommended Swagger testing order:
+
+1. Expand **Knowledge**
+2. Execute `POST /api/knowledge/initialize`
+3. Confirm that the sample policy documents were indexed
+4. Expand **RAG**
+5. Use **Try it out** on each RAG endpoint
+
+Classic Vector RAG:
+
+    POST /api/rag/classic
+
+    {
+      "question": "Can I return a laptop after 20 days?"
+    }
+
+Hybrid RAG:
+
+    POST /api/rag/hybrid
+
+    {
+      "question": "What warranty applies to SKU-XPS-9530?"
+    }
+
+Filtered RAG:
+
+    POST /api/rag/filtered
+
+    {
+      "question": "Can I return this laptop after 20 days?",
+      "country": "IN",
+      "productCategory": "Laptop"
+    }
+
+Multi-query RAG:
+
+    POST /api/rag/multi-query
+
+    {
+      "question": "My laptop arrived damaged during the festival offer and its warranty expires next month. Can I return it or should I use warranty?"
+    }
+
+Agentic-style RAG:
+
+    POST /api/rag/agentic
+
+    {
+      "question": "My laptop arrived damaged, delivery was late, and I bought it during a festival promotion. What policies should be considered?"
+    }
+
+The `.http` file remains available for developers who prefer Visual Studio or VS Code HTTP testing, but Swagger is the primary interactive testing UI for this sample.
 
 ## Step 1 - initialize knowledge
 
